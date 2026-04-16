@@ -1,4 +1,4 @@
-name: continuous_integration
+name: Python Tests
 
 on: push
 
