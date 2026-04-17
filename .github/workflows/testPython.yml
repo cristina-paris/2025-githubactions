@@ -14,4 +14,4 @@ jobs:
           python-version: '3.13'
 
       - name: test_script
-        run: python test_utils.py
+        run: python -m unittest test_utils.py
