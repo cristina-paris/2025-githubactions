@@ -1,4 +1,4 @@
-name: Python Tests
+name: Python Tests Docker
 
 on: push
 
@@ -18,5 +18,3 @@ jobs:
 
       - name: test_script
         run: python -m unittest test_utils.py
-
-  build:
