@@ -18,6 +18,12 @@ jobs:
       - name: test_script
         run: python -m unittest test_utils.py
 
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    if: success()
+
+    steps:
       - name: Build release distributions
         run: |
           # Instala o paquete que nos permite empaquetar o paquete
