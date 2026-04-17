@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.13'
+          # cachear as dependencias para acelerar futuras execucións
+          cache: 'pip'
 
       - name: test_script
         run: python -m unittest test_utils.py
