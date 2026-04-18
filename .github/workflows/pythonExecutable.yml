@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
       - name: test_script
         run: python -m unittest test_utils.py
@@ -24,6 +24,13 @@ jobs:
     if: success()
 
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
       - name: Build release distributions
         run: |
           # Instala o paquete que nos permite empaquetar o paquete
