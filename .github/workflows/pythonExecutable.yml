@@ -24,10 +24,10 @@ jobs:
     if: success()
 
     steps:
-      - run: ls -l
-
       - name: Checkout Code
         uses: actions/checkout@v6
+
+      - run: ls -l
 
       - name: Setup Python
         uses: actions/setup-python@v6
